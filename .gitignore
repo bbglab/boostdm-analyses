@@ -1,0 +1,4 @@
+boostdm-output/
+source-data/
+*.pickle.gz
+*.tsv
