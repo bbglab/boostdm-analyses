@@ -29,7 +29,7 @@ dict_colors_role = {"Act": "#a6611a",
                     "LoF": "#018571",
                     "ambiguous": "#f5f5f5",#808080
                     "Amb": "#f5f5f5"}
-all_observed_mutations = "/workspace/projects/boostdm/nature-release/boostdm-output/aggregated/all_unique_mutations_driver_genes.tsv.gz"
+all_observed_mutations = "/workspace/projects/boostdm/nature-release/boostdm-output/discovery/mutations.tsv"
 
 def config_params(font_size=10):
 

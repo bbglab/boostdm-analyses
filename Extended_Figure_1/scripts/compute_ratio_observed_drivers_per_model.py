@@ -2,7 +2,7 @@
 Script to generate the table to display Figure 1e and Extended Figure 1XXX
 Input, raw Source data: 
 
--- all_unique_mutations_driver_genes.tsv: unique mutations observed in driver genes
+-- discovery/mutations.tsv: unique mutations observed in driver genes
 -- model_selection_information.tsv": stats about the models, including specifity and selection information
 
 Output, combined information : 
@@ -25,8 +25,25 @@ import oncotree as oncotree
 oncotree = oncotree.Oncotree()
 conf.config_params()
 
-# load all mutations
-df=pd.read_csv(conf.all_observed_mutations,sep="\t")
+# prepare dataset by loading drivers and their associated tumor type
+
+df_drivers = pd.read_csv(conf.drivers_path,sep="\t")
+df_cohorts = pd.read_csv(conf.cohorts_path,sep="\t")
+
+d=df_cohorts[["COHORT","CANCER_TYPE"]].set_index("COHORT").to_dict()["CANCER_TYPE"]
+d["HARTWIG_LUNG_NON_SMALL_CELL"] = "LUNG_CANCER" # this tumor type has been renamed
+k={"NSCLC":"LUNG_CANCER"} # this tumor type has been renamed
+df_drivers["CANCER_TYPE"] = df_drivers.apply(lambda row: row["CANCER_TYPE"] if not(row["CANCER_TYPE"] in k) else k[row["CANCER_TYPE"]],axis=1) # re-annotated lung cnacers
+
+# read all unique observed mutations and assign tumor type
+df=pd.read_csv(conf.all_observed_mutations,sep="\t",usecols=["chr","pos","ref","mut","aachange","COHORT","gene"]).drop_duplicates() # only unique mutations
+df["CANCER_TYPE"] = df.apply(lambda row: d[row["COHORT"]],axis=1)
+df.drop(columns=["COHORT"],inplace=True)
+s=df_drivers[["CANCER_TYPE","SYMBOL"]].drop_duplicates().rename(columns={"SYMBOL":"gene"})
+   
+df=df.merge(s) # only drivers in tumor type
+df.drop_duplicates(inplace=True) # make them unique 
+print ("Number of unique mutatoins...",df.shape[0])
 
 
 # include information about type of model for each mutation...
