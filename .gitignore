@@ -1,9 +1,14 @@
 # datasets
-
 boostdm-output/
 source-data/
 *.pickle.gz
+*.tsv.gz
 *.tsv
+*.txt
+
+# images
+*.png
+*.svg
 
 
 # Byte-compiled / optimized / DLL files
