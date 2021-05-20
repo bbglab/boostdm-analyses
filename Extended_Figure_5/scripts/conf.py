@@ -18,6 +18,9 @@ PFAM_info = '/workspace/projects/boostdm/nature-release/boostdm-output/intogen/p
 # CDS coordinates
 path_coord = '/workspace/projects/boostdm/nature-release/boostdm-output/intogen/cds_biomart.tsv'
 
+# linear complexity
+complexity_path = '/workspace/projects/boostdm/nature-release/boostdm-output/discovery/linear_complexity.tsv'
+
 # oncotree
 oncotree_path = os.path.join(intogen_data, "oncotree", "tree_cancer_types.json")
 
