@@ -1,10 +1,15 @@
 # datasets
 
+.gitignore
 boostdm-output/
 source-data/
 *.pickle.gz
+*.pickle
 *.tsv
-
+*.tsv.gz
+*.pdf
+*.png
+*.svg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
