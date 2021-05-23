@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-def shap_table(gene, ttype, prediction_folder):
+def shap_table(gene, ttype, prediction_folder, suffix='tsv.gz'):
     
-    fn = os.path.join(prediction_folder, f'{gene}.{ttype}.prediction.80.30.tsv.gz')
+    fn = os.path.join(prediction_folder, f'{gene}.{ttype}.prediction.{suffix}')
     try:
         saturation_df = pd.read_csv(fn, sep='\t')
     except FileNotFoundError as e:
@@ -17,11 +17,11 @@ def shap_table(gene, ttype, prediction_folder):
     return saturation_df[saturation_df['boostDM_class']][[a for a in saturation_df.columns if a.startswith('shap')]]
 
 
-def shap_table_geneset(geneset, prediction_folder):
+def shap_table_geneset(geneset, prediction_folder, **kwargs):
 
     total_df = []
     for gene, ttype in geneset:
-        shaps = shap_table(gene, ttype, prediction_folder)
+        shaps = shap_table(gene, ttype, prediction_folder, **kwargs)
         total_df.append(shaps)
     if len(total_df) > 0:
         table = pd.concat(total_df, axis=0)
@@ -37,9 +37,9 @@ def shap_heatmap(geneset):
         plt.show()
 
 
-def shap_pca_plot(gene, ttype):
+def shap_pca_plot(gene, ttype, prediction_folder, **kwargs):
     
-    table = shap_table_geneset([(gene, ttype)])
+    table = shap_table_geneset([(gene, ttype)], prediction_folder, **kwargs)
     if table is not None:
         X = table.values
     else:
@@ -57,11 +57,11 @@ def shap_pca_plot(gene, ttype):
     return y
 
 
-def linear_complexity(gene, ttype, prediction_folder):
+def linear_complexity(gene, ttype, prediction_folder, **kwargs):
     """Close to zero (resp. one) means low (resp. high) complexity"""
 
     try:
-        table = shap_table_geneset([(gene, ttype)], prediction_folder)
+        table = shap_table_geneset([(gene, ttype)], prediction_folder, **kwargs)
         if table is not None:
             X = table.values
 
@@ -76,5 +76,6 @@ def linear_complexity(gene, ttype, prediction_folder):
         auc = model.explained_variance_ratio_.cumsum().mean()
         score = 1 - 2 * (auc - 0.5)
         return score
+
     except (FileNotFoundError, ValueError) as e:
         return None
