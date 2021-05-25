@@ -118,7 +118,5 @@ selecte_ttypes=['LGG',
  'MGCT']
 
 # path samples
-samples_intogen = "/workspace/projects/intogen_2017/runs/20200102/filters/variants.json"
-samples_stjude = "/workspace/projects/stjude/intogen/runs/20191022/filters/variants.json"
-samples_hartwig = "/workspace/projects/hartwig/intogen/runs/20200117_20200121//filters/variants.json"
+samples_intogen = "/workspace/projects/boostdm/nature-release/boostdm-output/discovery/samples_anonymized.json"
 dictionary_dndscv = "/workspace/projects/boostdm/nature-release/dndscv/dictionary_excess_dndscv.json"

@@ -97,17 +97,11 @@ df_mut_drivers=df_muts_total.merge(df_drivers)
 
 # now for each sample compute number of driver mutations according to boostdm 
 
-dict_samples1 = json.load(open(conf.samples_intogen,'r'))
-dict_samples2 = json.load(open(conf.samples_stjude,'r'))
-dict_samples3 = json.load(open(conf.samples_hartwig,'r'))
+d = json.load(open(conf.samples_intogen,'r'))
 dict_info = {}
-for d in [dict_samples1,dict_samples2,dict_samples3]:
-    for key in d:
-        set_hypermutators = set()
-        if "hypermutators" in d[key]:
-                set_hypermutators = set(list(d[key]["hypermutators"]["hypermutators"]))
-        samples_total = set(d[key]["samples"]["mut_per_sample"].keys()) - set_hypermutators
-        dict_info[key]=samples_total
+for key in d:
+   
+    dict_info[key]=d[key]
         
         
 # count number of drivers per sample
