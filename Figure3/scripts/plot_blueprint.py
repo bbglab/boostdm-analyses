@@ -142,7 +142,7 @@ def tracked_blueprint(gene, ttype, df_codon, outpath, show=False, plotlabel=None
                                                                         ascending=True)
 
         # define figure layout
-        fig = plt.figure(figsize=(10, 3))
+        fig = plt.figure(figsize=(8, 3))
 
         # grid layout
         gs = gridspec.GridSpec(20, 13, figure=fig)
