@@ -11,6 +11,11 @@ drivers_path = os.environ['DRIVERS_PATH']
 os.environ['COHORTS_PATH'] = "/workspace/projects/boostdm/nature-release/boostdm-output/intogen/cohorts.tsv"
 cohorts_path = os.environ['COHORTS_PATH']
 
+
+# signature analysis
+pcawg_sigprofiler = "/workspace/projects/boostdm/nature-release/PCAWG_sigProfiler_SBS_signatures_in_samples.csv"
+cosmic_fitting = "/workspace/projects/boostdm/nature-release/cosmic_fitting/*.out.limitted_COSMIC.txt"
+
 # PFAM info
 PFAM_files = '/workspace/projects/boostdm/nature-release/boostdm-output/intogen/pfam_biomart.tsv.gz'
 PFAM_info = '/workspace/projects/boostdm/nature-release/boostdm-output/intogen/pfam_names.info.csv'
