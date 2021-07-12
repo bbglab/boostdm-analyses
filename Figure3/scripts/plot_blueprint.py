@@ -230,7 +230,7 @@ def plot_codon_bands(df_pfam_gene, df, ax_0, ax_1, ax_2):
     n, bins, patches2 = ax_1.hist(passenger_y + driver_y, bins=20, orientation='horizontal', alpha=1)
     for i in range(10):
         patches2[i].set_facecolor('#636363')
-    for i in range(11, 20):
+    for i in range(10, 20):
         patches2[i].set_facecolor('#ac0f0f')
 
     ax_1.spines['right'].set_visible(False)

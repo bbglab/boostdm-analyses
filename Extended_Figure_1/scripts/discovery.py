@@ -1,5 +1,4 @@
 import sys
-sys.path.append('../')
 
 import random
 from functools import reduce
@@ -16,9 +15,7 @@ tree = oncotree.Oncotree()
 
 def get_mutations(mutations, ttype, gene):
 
-    cohorts_in_ttype = reduce(operator.concat,
-                              [list(zip(*tree.get_cohorts(tt)))[0] for tt in tree.get_ttypes(ttype)])
-    df = mutations[mutations['COHORT'].isin(cohorts_in_ttype)]
+    df = mutations[mutations['CANCER_TYPE'] == ttype]
     df = df[df['gene'] == gene]
     df['chr'] = df['chr'].astype(str)
     df['pos'] = df['pos'].astype(int)
@@ -163,14 +160,14 @@ def plot_fit(gene, ttype, samples, mutations, ax, iterations=100, ngrid=20, colo
     x = np.linspace(0, grid[-1], num=50)
     y_mean = list(map(np.mean, zip(*map(lambda p: [master_func(s, *p) for s in x], params))))
     score = np.round(np.median(disc), 2)
-    ax.plot(x, y_mean, alpha=1, color=color_curve, label=f'{ttype}: MDI={score}')
+    ax.plot(x, y_mean, alpha=1, color=color_curve, label=f'{ttype}: discovery={score}')
 
     ax.set_xlabel('no. samples')
     if ylabel:
         ax.set_ylabel('no. unique mutations')
 
     if title is None:
-        title = f'{gene}:{ttype}\nMDI={score}'
+        title = f'{gene}:{ttype}\ndiscovery={score}'
     ax.set_title(title)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -191,14 +188,14 @@ def plot_fit_multiple(gene, ttype, samples, mutations, ax, iterations=100, ngrid
     x = np.linspace(0, grid[-1], num=50)
     y_mean = list(map(np.mean, zip(*map(lambda p: [master_func(s, *p) for s in x], params))))
     score = np.round(np.median(disc), 2)
-    ax.plot(x, y_mean, alpha=0.8, lw=3, color=color_curve, label=f'{ttype}: MDI={score}')
+    ax.plot(x, y_mean, alpha=0.8, lw=3, color=color_curve, label=f'{ttype}: discovery={score}')
     ax.scatter([x[-1]], [y_mean[-1]], s=50, color=color_curve, alpha=0.8)
     ax.set_xlabel('no. samples')
     if ylabel:
         ax.set_ylabel('no. unique mutations')
 
     if title is None:
-        title = f'{gene}:{ttype}\nMDI={score}'
+        title = f'{gene}:{ttype}\ndiscovery={score}'
     ax.set_title(title)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)

@@ -18,10 +18,8 @@ from mutrate import set_mutrate
 import conf
 import oncotree
 
-#from .. import conf
-#from .. import oncotree
-
 tree = oncotree.Oncotree()
+
 
 # load model selection
 
@@ -61,7 +59,7 @@ observed_mutations = load_observed()
 
 def load_saturation():
     print('Loading in silico saturation mutagenesis...')
-    fn = '/workspace/projects/boostdm/benchmark_supplement/datasets/saturation_aggregate.tsv.gz'
+    fn = os.path.join(os.environ['PATH_SOURCE_DATA'], 'extended-figure7-source-data', 'saturation_aggregate.tsv.gz')
     df = pd.read_csv(fn, sep='\t', low_memory=False)
     return df
 
