@@ -394,9 +394,6 @@ def comparison_boxplot(auc1, auc2, legend1, legend2, fname):
     ax.text(1, 1.1, legend1, horizontalalignment='center')
     ax.text(2, 1.1, legend2, horizontalalignment='center')
 
-    ax.text(1., 0.35, f'N={len(auc1)}', horizontalalignment='center')
-    ax.text(2, 0.35, f'N={len(auc2)}', horizontalalignment='center')
-
     ax.text(1.3, 1, f'p < {p:0.1e}')
 
     ax.set_ylabel('Probability Bias')
