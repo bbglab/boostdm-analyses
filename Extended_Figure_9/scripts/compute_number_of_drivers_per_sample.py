@@ -44,8 +44,8 @@ k={"NSCLC":"LUNG_CANCER"} # this tumor type has been renamed
 df_cohorts["CANCER_TYPE"] = df_cohorts.apply(lambda row: row["CANCER_TYPE"] if not(row["CANCER_TYPE"] in k) else k[row["CANCER_TYPE"]],axis=1)
 
 # load all mutations 
-df_muts_total = pd.read_csv(conf.all_observed_mutations,sep="\t")
-df_muts_total = df_muts_total.merge(df_cohorts[["COHORT","CANCER_TYPE"]]) # add cancer type
+df_muts_total = pd.read_csv(conf.all_observed_mutations,sep="\t").rename(columns={"ttype":"CANCER_TYPE"})
+#df_muts_total = df_muts_total.merge(df_cohorts[["COHORT","CANCER_TYPE"]]) # add cancer type
 
 # define ttypes
 leaves = oncotree.get_ttypes("CANCER")

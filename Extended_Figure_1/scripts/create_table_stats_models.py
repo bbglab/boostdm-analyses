@@ -32,6 +32,10 @@ conf.config_params()
 path_discovery_info = os.path.join(conf.output_boostdm,"discovery","discovery.tsv")
 discovery = pd.read_csv(path_discovery_info, sep='\t')
 
+# remove SOHLH2, this gene has a duplicated cds thatoverlaps with a SOHLH2 fusion
+
+discovery = discovery[discovery["gene"]!="SOHLH2"]
+                      
 
 # load drivers
 

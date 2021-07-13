@@ -42,9 +42,8 @@ k={"NSCLC":"LUNG_CANCER"} # this tumor type has been renamed
 df_drivers["CANCER_TYPE"] = df_drivers.apply(lambda row: row["CANCER_TYPE"] if not(row["CANCER_TYPE"] in k) else k[row["CANCER_TYPE"]],axis=1) # re-annotated lung cnacers
 
 # read all unique observed mutations and assign tumor type
-df=pd.read_csv(conf.all_observed_mutations,sep="\t",usecols=["chr","pos","ref","mut","aachange","COHORT","gene"]).drop_duplicates() # only unique mutations
-df["CANCER_TYPE"] = df.apply(lambda row: d[row["COHORT"]],axis=1)
-df.drop(columns=["COHORT"],inplace=True)
+df=pd.read_csv(conf.all_observed_mutations,sep="\t",usecols=["chr","pos","ref","mut","aachange","ttype","gene"]).drop_duplicates().rename(columns={"ttype":"CANCER_TYPE"}) # only unique mutations
+df["CANCER_TYPE"] = df.apply(lambda row: row["CANCER_TYPE"] if not(row["CANCER_TYPE"] in k) else k[row["CANCER_TYPE"]],axis=1) # re-annotated lung cnacers
 s=df_drivers[["CANCER_TYPE","SYMBOL"]].drop_duplicates().rename(columns={"SYMBOL":"gene"})
    
 df=df.merge(s) # only drivers in tumor type
