@@ -17,6 +17,8 @@ PFAM_info = os.path.join(intogen_data,"pfam_names.info.csv")
 path_coord = os.path.join(intogen_data,"cds_biomart.tsv") 
 # oncotree
 oncotree_path = os.path.join(intogen_data, "oncotree", "tree_cancer_types.json")
+
+complexity_path = os.path.join(output_boostdm, 'discovery', 'linear_complexity.tsv')
 # colors
 dict_colors_role = {"Act": "#a6611a",
                     "LoF": "#018571",

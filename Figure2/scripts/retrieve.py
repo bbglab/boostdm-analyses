@@ -53,7 +53,7 @@ def get_shaps(observed_mutations, gene=None, ttype=None):
 
         g, tt = tuple((os.path.basename(fn)).split('.')[:2])
         cohorts = list(zip(*tree.get_cohorts(tt)))[0]
-        dh = dg[dg['COHORT'].isin(cohorts)]
+        dh = dg[dg['ttype']==tt]
         dh['ttype'] = tt
 
         df_pred = pd.read_csv(fn, sep='\t')

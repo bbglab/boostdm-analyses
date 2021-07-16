@@ -32,9 +32,9 @@ def create_observed_dataset(gene, ttype, obs_mut):
     sat_pred['chr'] = sat_pred['chr'].astype(str)
     sat_pred['pos'] = sat_pred['pos'].astype(int)
     cohorts_under_ttype = list(zip(*tree.get_cohorts(ttype)))[0]
-    obs_mut = obs_mut[(obs_mut['gene'] == gene) & (obs_mut['COHORT'].isin(cohorts_under_ttype))]
+    obs_mut = obs_mut[(obs_mut['gene'] == gene) & (obs_mut['ttype']==ttype)]
     df = pd.merge(obs_mut, sat_pred, on=['chr', 'pos', 'alt', 'gene', 'aachange'], how='inner')
-    return df
+    return df.rename(columns={"ttype":"cancer_type"})
 
 
 def get_position(row):
@@ -51,7 +51,7 @@ def get_plot_data(data):
     df_stats = pd.read_csv(conf.cohorts_path, sep="\t")
     df_stats.rename(columns={"CANCER_TYPE": "cancer_type"},inplace=True)
 
-    data = data.merge(df_stats[["COHORT", "cancer_type"]])
+    #data = data.merge(df_stats[["COHORT", "cancer_type"]])
 
     data["Protein_position"] = data.apply(lambda row: get_position(row), axis=1)
     data["AA"] = data.apply(lambda row: row["aachange"][0], axis=1)
