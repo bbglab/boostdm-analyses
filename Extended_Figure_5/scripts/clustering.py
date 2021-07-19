@@ -69,7 +69,7 @@ def generate_hierarchy(df, n_labels_bound=10):
 
     ddgram = fancy_dendrogram(linkage,
                               truncate_mode='level',
-                              labels=df.index.values,
+                              labels=list(df.index.values),
                               leaf_rotation=90,
                               color_threshold=0,
                               above_threshold_color='green',

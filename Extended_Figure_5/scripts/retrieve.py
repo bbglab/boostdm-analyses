@@ -42,7 +42,7 @@ def get_shaps(observed_mutations, gene=None, ttype=None):
     dg = observed_mutations
     if ttype is not None:
         cohorts = list(zip(*tree.get_cohorts(ttype)))[0]
-        dg = dg[dg['COHORT'].isin(cohorts)].copy()
+        dg = dg[dg['ttype']==ttype].copy()
     if gene is not None:
         dg = dg[dg['gene'] == gene]
     dg.rename(columns={'mut': 'alt'}, inplace=True)
@@ -53,8 +53,7 @@ def get_shaps(observed_mutations, gene=None, ttype=None):
 
         g, tt = tuple((os.path.basename(fn)).split('.')[:2])
         cohorts = list(zip(*tree.get_cohorts(tt)))[0]
-        dh = dg[dg['COHORT'].isin(cohorts)]
-        dh['ttype'] = tt
+        dh = dg[dg['ttype']==tt]
 
         df_pred = pd.read_csv(fn, sep='\t')
         df_pred = df_pred[(df_pred['boostDM_score'] >= 0.5)]
