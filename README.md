@@ -13,8 +13,7 @@ This repo contains the source code to reproduce the main and extended figures of
 Each figure has its own jupyter notebook to render the figure's panels.<br>
 
 #### Main figures
-
-Figure 1: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Figure1/display_panels_Figure1.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Figure1.pdf)]<br>
+Figure 1: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Figure1/display_panels_Figure1_final.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Figure1.pdf)]<br>
 Figure 2: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Figure2/display_panels_Figure2.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Figure2.pdf)]<br>
 Figure 3: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Figure3/display_panels_Figure3.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Figure3.pdf)]<br>
 Figure 4: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Figure4/display_panels_Figure4.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Figure4.pdf)]<br>
