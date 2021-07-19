@@ -48,7 +48,6 @@ def load_observed():
     print('Loading observed mutations...')
     fn = os.path.join(conf.output_boostdm, 'discovery', 'mutations.tsv')
     df = pd.read_csv(fn, sep='\t')
-    df['ttype'] = df['COHORT'].apply(lambda x: cohort_ttype_dict.get(x, None))
     return df
 
 
