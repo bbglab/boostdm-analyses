@@ -46,9 +46,26 @@ from zenodo using the [utils/get.sh](https://github.com/bbglab/boostdm-analyses/
 $ source get.sh <target-folder>
 ```
 
-#### Software dependencies
+#### Run with Singularity
 
-[TO-DO](XXX)
+The notebooks must be launched from a jupyter-notebook or jupyter-lab session running on a
+[Singularity](https://sylabs.io/) image that already satisfies all the software dependencies.<br>
+
+Follow the following steps:
+
+* [Install the latest Singularity release](https://sylabs.io/guides/3.0/user-guide/installation.html#)<$
+
+* Build a singularity image from the [Singularity](https://github.com/bbglab/boostdm-analyses/blob/mast$
+
+```
+$ singularity build boostdm-analyses.simg Singularity
+```
+
+* Run jupyter-notebook or jupyter-lab from the singularity image:
+
+```
+$ singularity exec --bind $PWD:/notebook boostdm-analyses.simg jupyter-lab
+```
 
 ## Contact and feedback
 
