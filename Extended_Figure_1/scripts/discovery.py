@@ -15,7 +15,7 @@ tree = oncotree.Oncotree()
 
 def get_mutations(mutations, ttype, gene):
 
-    df = mutations[mutations['CANCER_TYPE'] == ttype]
+    df = mutations[mutations['ttype'] == ttype]
     df = df[df['gene'] == gene]
     df['chr'] = df['chr'].astype(str)
     df['pos'] = df['pos'].astype(int)
