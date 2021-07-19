@@ -53,9 +53,9 @@ The notebooks must be launched from a jupyter-notebook or jupyter-lab session ru
 
 Follow the following steps:
 
-* [Install the latest Singularity release](https://sylabs.io/guides/3.0/user-guide/installation.html#)<$
+* [Install the latest Singularity release](https://sylabs.io/guides/3.0/user-guide/installation.html#)<br>
 
-* Build a singularity image from the [Singularity](https://github.com/bbglab/boostdm-analyses/blob/mast$
+* Build a singularity image from the [Singularity](https://github.com/bbglab/boostdm-analyses/blob/master/Singularity) recipe:
 
 ```
 $ singularity build boostdm-analyses.simg Singularity
@@ -70,4 +70,3 @@ $ singularity exec --bind $PWD:/notebook boostdm-analyses.simg jupyter-lab
 ## Contact and feedback
 
 [TO-DO](XXX)
-
