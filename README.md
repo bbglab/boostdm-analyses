@@ -37,36 +37,35 @@ You can explore and download the main outputs of boostDM in the [boostDM website
 
 ## Requirements
 
-#### Source data
+#### Download source data
 
-All the code features in this repo feeds on source data. Make sure that you download a stable copy of the source data 
-from zenodo using the [utils/get.sh](https://github.com/bbglab/boostdm-analyses/blob/master/utils/get.sh) script:
+All the code features in this repo feeds on source data. 
 
-```
-$ source get.sh <target-folder>
-```
-
-#### Run with Singularity
-
-The notebooks must be launched from a jupyter-notebook or jupyter-lab session running on a
-[Singularity](https://sylabs.io/) image that already satisfies all the software dependencies.<br>
-
-Follow the following steps:
-
-* [Install the latest Singularity release](https://sylabs.io/guides/3.0/user-guide/installation.html#)<br>
-
-* Build a singularity image from the [Singularity](https://github.com/bbglab/boostdm-analyses/blob/master/Singularity) recipe:
+Make sure that you download a stable copy of the source data from zenodo and keep it in the root of the repo
+from [zenodo](https://zenodo.org/) as follows:
 
 ```
-$ singularity build boostdm-analyses.simg Singularity
+$ pip install zenodo_get
+$ bash get.sh
 ```
 
-* Run jupyter-notebook or jupyter-lab from the singularity image:
+#### Run notebooks with singularity
+
+The notebooks must be run on a jupyter-notebook or jupyter-lab session launched from 
+[Singularity](https://sylabs.io/) image that already satisfies all the dependencies for the notebooks to run.<br>
+
+Follow these steps:
+
+* [Install](https://sylabs.io/guides/3.0/user-guide/installation.html#) the latest Singularity release<br>
+
+* Create a singularity image using the [Singularity](https://github.com/bbglab/boostdm-analyses/blob/master/Singularity) recipe:
 
 ```
-$ singularity exec --bind $PWD:/notebook boostdm-analyses.simg jupyter-lab
+$ sudo singularity build boostdm-analyses.sif Singularity
 ```
 
-## Contact and feedback
+* Now you can run the notebooks from singularity:
 
-[TO-DO](XXX)
+```
+$ singularity exec boostdm-analyses.sif jupyter-lab
+```
