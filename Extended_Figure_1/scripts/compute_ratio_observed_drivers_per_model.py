@@ -43,12 +43,12 @@ s=df_drivers[["CANCER_TYPE","SYMBOL"]].drop_duplicates().rename(columns={"SYMBOL
    
 df=df.merge(s) # only drivers in tumor type
 df.drop_duplicates(inplace=True) # make them unique 
-print ("Number of unique mutatoins...",df.shape[0])
+print ("Number of unique mutations...",df.shape[0])
 
 
 # include information about type of model for each mutation...
 
-df_info = pd.read_csv("./source_data/model_selection_information.tsv",sep="\t")
+df_info = pd.read_csv(os.path.join(os.environ["PATH_SOURCE_DATA"], "extended-figure1-source-data", "model_selection_information.tsv"), sep="\t")
 df_info = df_info[df_info["selected"]]
 df_info["CANCER_TYPE"]= df_info["ttype"]
 df_info["model_gene_ttype_specific"] = True

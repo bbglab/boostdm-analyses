@@ -55,7 +55,7 @@ def plot_score_distribution(values, ax):
     n, bins, patches = ax.hist(values, bins=20, orientation='vertical')
     for i in range(10):
         patches[i].set_facecolor('#636363')
-    for i in range(11, 20):
+    for i in range(10, 20):
         patches[i].set_facecolor('#ac0f0f')
     ax.set_xlim(0, 1)
 
@@ -244,7 +244,7 @@ def plot_full_nucleotide_bands(df_pfam_gene, df, ax0, ax2, ax3):
     n, bins, patches2 = ax2.hist(passenger_y + driver_y, bins=20, orientation='horizontal', alpha=1)
     for i in range(10):
         patches2[i].set_facecolor('#636363')
-    for i in range(11, 20):
+    for i in range(10, 20):
         patches2[i].set_facecolor('#ac0f0f')
 
     ax2.spines['right'].set_visible(False)
@@ -350,7 +350,7 @@ def plot_full_nucleotide_bands_observed(df_pfam_gene, df, ax0, ax2, ax3):
     n, bins, patches2 = ax2.hist(passenger_y + driver_y, bins=20, orientation='horizontal', alpha=1)
     for i in range(10):
         patches2[i].set_facecolor('#636363')
-    for i in range(11, 20):
+    for i in range(10, 20):
         patches2[i].set_facecolor('#ac0f0f')
 
     ax2.spines['right'].set_visible(False)

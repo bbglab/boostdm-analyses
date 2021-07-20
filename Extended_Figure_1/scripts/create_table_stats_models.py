@@ -76,7 +76,7 @@ discovery["selected"] = discovery.apply(lambda row: is_selected_model(row),axis=
 
 # add feature complexity
 
-df_complexity = pd.read_csv("/workspace/projects/boostdm/feature_complexity/linear_complexity.tsv",sep="\t")
+df_complexity = pd.read_csv(os.path.join(os.environ["PATH_SOURCE_DATA"], "boostdm-output", "discovery", "linear_complexity.tsv"), sep="\t")
 discovery = discovery.merge(df_complexity,how="left")
 
 # save the combined table
