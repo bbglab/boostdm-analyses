@@ -26,5 +26,5 @@ From: debian:buster-slim
                           bgdata bgreference \
                           matplotlib==3.0.2 seaborn \
                           ipykernel ipython jupyterlab tqdm click \
-                          scikit-learn patsy statsmodels
+                          scikit-learn patsy statsmodels statannot
 
