@@ -5,7 +5,6 @@ From: debian:buster-slim
     export DEBIAN_FRONTEND=noninteractive
     export TZ=Europe
     export LC_ALL=C.UTF-8
-    export BGDATA_OFFLINE=TRUE
     export PATH_SOURCE_DATA=$PWD/source-data
 
 %help
