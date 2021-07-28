@@ -10,6 +10,9 @@ os.environ['DRIVERS_PATH'] = os.path.join(intogen_data,"drivers.tsv")
 drivers_path = os.environ['DRIVERS_PATH']
 os.environ['COHORTS_PATH'] = os.path.join(intogen_data,"cohorts.tsv")
 cohorts_path = os.environ['COHORTS_PATH']
+# feature complexity
+complexity_path = os.path.join(output_boostdm, 'discovery', 'linear_complexity.tsv')
+
 # PFAM info
 PFAM_files = os.path.join(intogen_data,"pfam_biomart.tsv.gz")
 PFAM_info = os.path.join(intogen_data,"pfam_names.info.csv")
