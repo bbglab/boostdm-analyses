@@ -5,7 +5,7 @@ From: debian:buster-slim
     export DEBIAN_FRONTEND=noninteractive
     export TZ=Europe
     export LC_ALL=C.UTF-8
-    export PATH_SOURCE_DATA=$PWD/source-data
+    export PATH_SOURCE_DATA=$PWD/boostdm-analyses
 
 %help
     Singularity image to run boostdm-analyses notebooks with all dependencies
