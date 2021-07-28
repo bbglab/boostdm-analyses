@@ -2,10 +2,9 @@
 
 Source code to reproduce the figures of the paper:
 
-> *In silico saturation mutagenesis of cancer genes*<br> 
-Ferran Muiños, Francisco Martinez-Jimenez, Oriol Pich, Abel Gonzalez-Perez, Nuria Lopez-Bigas<br>
-Nature XX (XX) XX-XX<br>
-DOI: [https://doi.org/10.1038/s41586-021-03771-1]
+> **In silico saturation mutagenesis of cancer genes**<br> 
+  Ferran Muiños, Francisco Martinez-Jimenez, Oriol Pich, Abel Gonzalez-Perez, Nuria Lopez-Bigas<br>
+  DOI: https://doi.org/10.1038/s41586-021-03771-1
 
 ## Content
 
@@ -20,15 +19,15 @@ Figure 4: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/b
 
 #### Extended Figures
 
-Extended Figure 1: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_1/display_panels_Extended_Figure1.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure1.pdf)]<br>
-Extended Figure 2: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_2/display_panels_Extended_Figure2.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure2.pdf)]<br>
-Extended Figure 3: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_3/display_panels_Extended_Figure3.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure3.pdf)]<br>
-Extended Figure 4: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_4/display_panels_Extended_Figure4.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure4.pdf)]<br>
-Extended Figure 5: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_5/display_panels_Extended_Figure5.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure5.pdf)]<br>
-Extended Figure 6: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_6/display_panels_Extended_Figure6.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure6.pdf)]<br>
-Extended Figure 7: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_7/display_panels_Extended_Figure7.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure7.pdf)]<br>
-Extended Figure 8: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_8/display_panels_Extended_Figure8.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure8.pdf)]<br>
-Extended Figure 9: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_9/display_panels_Extended_Figure9.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure9.pdf)]<br>
+Extended Figure 1: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_1/display_panels_Extended_Figure_1.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure1.pdf)]<br>
+Extended Figure 2: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_2/display_panels_Extended_Figure_2.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure2.pdf)]<br>
+Extended Figure 3: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_3/display_panels_Extended_Figure_3.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure3.pdf)]<br>
+Extended Figure 4: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_4/display_panels_Extended_Figure_4.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure4.pdf)]<br>
+Extended Figure 5: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_5/display_panels_Extended_Figure_5.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure5.pdf)]<br>
+Extended Figure 6: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_6/display_panels_Extended_Figure_6.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure6.pdf)]<br>
+Extended Figure 7: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_7/display_panels_Extended_Figure_7.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure7.pdf)]<br>
+Extended Figure 8: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_8/display_panels_Extended_Figure_8.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure8.pdf)]<br>
+Extended Figure 9: [[ipynb](https://nbviewer.jupyter.org/github/bbglab/boostdm-analyses/blob/master/Extended_Figure_9/display_panels_Extended_Figure_9.ipynb)] [[pdf](https://github.com/bbglab/boostdm-analyses/blob/master/figures_paper/Extended_Figure9.pdf)]<br>
 
 ## Complementary content
 
