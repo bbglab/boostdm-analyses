@@ -2,10 +2,10 @@
 
 Source code to reproduce the figures of the paper:
 
-> *In silico saturation mutagenesis of cancer genes*<br> 
-Ferran Muiños, Francisco Martinez-Jimenez, Oriol Pich, Abel Gonzalez-Perez, Nuria Lopez-Bigas<br>
-Nature XX (XX) XX-XX<br>
-DOI: [https://doi.org/10.1038/s41586-021-03771-1]
+> **In silico saturation mutagenesis of cancer genes**<br> 
+  Ferran Muiños, Francisco Martinez-Jimenez, Oriol Pich, Abel Gonzalez-Perez, Nuria Lopez-Bigas<br>
+  Nature XX (XX) XX-XX<br>
+  DOI: https://doi.org/10.1038/s41586-021-03771-1
 
 ## Content
 
