@@ -46,6 +46,8 @@ from [zenodo](https://zenodo.org/) as follows:
 ```
 $ pip install zenodo_get
 $ bash get.sh
+$ tar -xvf source-data-zenodo.tar.gz
+$ cp -r source-data/boostdm-analyses .
 ```
 
 #### Run notebooks with singularity
