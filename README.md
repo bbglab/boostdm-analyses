@@ -31,7 +31,7 @@ Extended Figure 9: [[ipynb](https://github.com/bbglab/boostdm-analyses/blob/mast
 
 ## Complementary content
 
-You can access to boostDM source code and documentation in the [boostDM pipeline repository](XXXX).<br>
+You can access to boostDM source code and documentation in the [boostDM pipeline repository](https://bitbucket.org/bbglab/boostdm/src/release/).<br>
 You can explore and download the main outputs of boostDM in the [boostDM website](https://www.intogen.org/boostdm).<br>
 
 ## Requirements
@@ -46,7 +46,7 @@ from [zenodo](https://zenodo.org/) as follows:
 ```
 $ pip install zenodo_get
 $ bash get.sh
-$ tar -xvf source-data-zenodo.tar.gz
+$ tar -xvf source-data/source-data-zenodo.tar.gz
 $ cp -r source-data/boostdm-analyses .
 ```
 
