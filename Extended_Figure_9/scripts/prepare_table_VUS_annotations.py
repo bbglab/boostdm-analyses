@@ -152,7 +152,7 @@ df_oncokb.to_csv("source_data/input_oncokb.tsv",sep="\t",index=False)
 
 if not(os.path.exists("source_data/output_oncokb.txt")):
     token="b08739b6-8299-4cd8-b36c-16a96d4647c4" # your oncokb token
-    os.system(f"python scripts/maf_annotator.py -i source_data/input_oncokb.tsv -o source_data/output_oncokb.txt  -b {token} -q HGVSp_Short") # this may take a while... if you want to use our OncoKB annotations, get them from conf.oncokb_output instead
+    os.system(f"python3 scripts/maf_annotator.py -i source_data/input_oncokb.tsv -o source_data/output_oncokb.txt  -b {token} -q HGVSp_Short") # this may take a while... if you want to use our OncoKB annotations, get them from conf.oncokb_output instead
 
 results_oncokb = pd.read_csv("source_data/output_oncokb.txt",sep="\t")
 oncokb=results_oncokb[(results_oncokb["VARIANT_IN_ONCOKB"]==True)&(results_oncokb["MUTATION_EFFECT"]!="Unknown")&(results_oncokb["MUTATION_EFFECT"]!="Inconclusive")] # remove inconclusive mutations
