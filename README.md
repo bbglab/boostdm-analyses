@@ -31,7 +31,7 @@ Extended Figure 9: [[ipynb](https://github.com/bbglab/boostdm-analyses/blob/mast
 
 ## Complementary content
 
-You can access to boostDM source code and documentation in the [boostDM pipeline repository](https://bitbucket.org/bbglab/boostdm/src/release/).<br>
+You can access to boostDM source code and documentation in the [boostDM pipeline repository](https://github.com/bbglab/boostdm-pipeline).<br>
 You can explore and download the main outputs of boostDM in the [boostDM website](https://www.intogen.org/boostdm).<br>
 
 ## Requirements
